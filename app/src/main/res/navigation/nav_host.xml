@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/oblokoFragment">
+
+    <fragment
+        android:id="@+id/oblokoFragment"
+        android:name="com.example.user.OblokoFragment"
+        android:label="fragment_obloko"
+        tools:layout="@layout/fragment_obloko" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.user.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/stockFragment"
+        android:name="com.example.user.StockFragment"
+        android:label="fragment_stock"
+        tools:layout="@layout/fragment_stock" />
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.user.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/diagramFragment"
+        android:name="com.example.user.DiagramFragment"
+        android:label="fragment_diagram"
+        tools:layout="@layout/fragment_diagram" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.user.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
