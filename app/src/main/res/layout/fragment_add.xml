@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AddFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/orqa_fon3">
 
 
     <LinearLayout
@@ -28,6 +29,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_margin="5dp"
             android:id="@+id/product_name"
+            android:textColorHint="@color/white"
             android:hint="  Prodact name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,6 +37,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_margin="5dp"
+            android:textColorHint="@color/white"
             android:id="@+id/product_soni"
             android:hint="  Prodact quantity"
             android:layout_width="wrap_content"
