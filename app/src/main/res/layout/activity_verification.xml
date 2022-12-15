@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button"
             android:selectAllOnFocus="true"
-            android:text="Send massage"
+            android:text="save"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:id="@+id/btn"/>
