@@ -25,7 +25,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_shape"
-
         app:itemRippleColor="@color/white"
         app:menu="@menu/menu"
         app:labelVisibilityMode="selected"
