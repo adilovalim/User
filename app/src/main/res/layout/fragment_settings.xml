@@ -17,7 +17,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#0000"
+            app:cardBackgroundColor="#2000"
             app:cardCornerRadius="25dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,14 +65,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/dark_mode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#0000"
-            app:cardCornerRadius="10dp">
+            app:cardBackgroundColor="#2000"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="2dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -112,8 +114,9 @@
             android:id="@+id/volume"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#0000"
-            app:cardCornerRadius="10dp">
+            app:cardBackgroundColor="#2000"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="2dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -153,8 +156,9 @@
             android:id="@+id/edit_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#0000"
-            app:cardCornerRadius="10dp">
+            app:cardBackgroundColor="#2000"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="2dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -187,8 +191,9 @@
             android:id="@+id/chat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#0000"
-            app:cardCornerRadius="10dp">
+            app:cardBackgroundColor="#2000"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="2dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -222,8 +227,9 @@
             android:id="@+id/facke_call"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#0000"
-            app:cardCornerRadius="10dp">
+            app:cardBackgroundColor="#2000"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="2dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -256,8 +262,9 @@
             android:id="@+id/firbase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#0000"
-            app:cardCornerRadius="10dp">
+            app:cardBackgroundColor="#2000"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="2dp">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -289,8 +296,9 @@
             android:id="@+id/ombor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#0000"
-            app:cardCornerRadius="10dp">
+            app:cardBackgroundColor="#2000"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="2dp">
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -322,15 +330,69 @@
             android:id="@+id/oldi_berdi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#0000"
-            app:cardCornerRadius="10dp"/>
+            app:cardBackgroundColor="#2000"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="2dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/icon_8"
+                    android:src="@drawable/ic_send_money"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Oldi berdi"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/icon_8"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/qarzi_bor_klentla"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#0000"
-            app:cardCornerRadius="10dp"/>
+            app:cardBackgroundColor="#2000"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="2dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/icon_9"
+                    android:src="@drawable/ic_get_money"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Qarzi bor klentla"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/icon_9"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
