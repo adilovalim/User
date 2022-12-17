@@ -6,7 +6,7 @@
     app:cardCornerRadius="25dp"
     android:layout_margin="10dp"
     android:padding="10dp"
-    app:cardBackgroundColor="#7000">
+    app:cardBackgroundColor="#5000">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -28,6 +28,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toRightOf="@id/immage_1"/>
         <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="#699BF7"
             android:id="@+id/btn_save"
             android:layout_width="140dp"
             android:layout_height="55dp"
@@ -46,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Save"
-                android:textColor="#FF9800"
+                android:textColor="@color/white"
                 android:textSize="20sp"/>
         </androidx.cardview.widget.CardView>
 
