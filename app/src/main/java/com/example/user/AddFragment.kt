@@ -40,6 +40,11 @@ class AddFragment : Fragment() {
                 Toast.makeText(context, "SUCCESSFULLY", Toast.LENGTH_SHORT).show()
             }
         }
+
+//        binding.radioBtn.setOnClickListener {
+//            binding.productSoni.visibility = View.INVISIBLE
+//            Toast.makeText(requireContext(), "ERROR", Toast.LENGTH_SHORT).show()
+//        }
         return view
     }
 

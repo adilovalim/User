@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".StockFragment"
-    android:background="@drawable/orqa_fon3">
+    >
 
     <LinearLayout
         android:background="@drawable/top_shape"
