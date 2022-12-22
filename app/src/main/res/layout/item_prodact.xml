@@ -15,9 +15,11 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
 
             <ImageView
+                android:layout_margin="2dp"
                 android:id="@+id/image_pr"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -35,21 +37,20 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/image_pr"
-                app:layout_constraintRight_toLeftOf="@id/prodact_soni"
+                app:layout_constraintRight_toLeftOf="@id/item_time"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/prodact_soni"
+                android:id="@+id/item_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Prodact"
+                android:text="time"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/prodact_name"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_margin="5dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
