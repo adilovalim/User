@@ -7,35 +7,42 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.user.adapter.DayAdapter
+import com.example.user.adapter.DialogAdapter
 import com.example.user.databinding.FragmentHomeBinding
+import com.example.user.model.DialogUser
 import com.example.user.model.Prodact
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
   lateinit var prodactList: ArrayList<Prodact>
   lateinit var prodactAdapter: DayAdapter
   lateinit var binding:FragmentHomeBinding
+  lateinit var dialogList: ArrayList<DialogUser>
+  lateinit var dialogAd:DialogAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // binding iwlatin
-        //aga ok kegn bottom nav no tori iwlavoti
-        // bilvoman bittada iwlomayapti\
-        // bosilgandan kegn iwladi
-        // bottom navdigi home icon
-        // bottom navi qarab ciqin qatida xato borligini
-        // boldimi any deski ocirvurimi
-        //da boladi hozi design i bn bottomi qarvoqaman
-        // aga
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         binding = FragmentHomeBinding.bind(view)
         addProdact()
-        prodactAdapter = DayAdapter(prodactList)
+        prodactAdapter = DayAdapter(requireContext(),prodactList)
         binding.rvOneDAy.layoutManager = LinearLayoutManager(requireContext())
         binding.rvOneDAy.adapter = prodactAdapter
+
+
+
+        addDialog()
+
+        dialogAd = DialogAdapter(dialogList)
+        binding// wetta topomayapti
         return view
+    }
+
+    private fun addDialog() {
+        dialogList = ArrayList()
+        for (i in 1..7){
+            dialogList.add(DialogUser(i, "Olma $$i", false))
+        }
     }
 
     private fun addProdact() {
