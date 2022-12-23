@@ -6,25 +6,44 @@
     app:startDestination="@id/oblokoFragment">
 
     <fragment
-        android:id="@+id/oblokoFragment"
-        android:name="com.example.user.OblokoFragment"
-        android:label="fragment_obloko"
-        tools:layout="@layout/fragment_obloko" />
-    <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.user.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_stockFragment"
+            app:destination="@id/stockFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_oblokoFragment"
+            app:destination="@id/oblokoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/stockFragment"
         android:name="com.example.user.StockFragment"
         android:label="fragment_stock"
-        tools:layout="@layout/fragment_stock" />
+        tools:layout="@layout/fragment_stock" >
+        <action
+            android:id="@+id/action_stockFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_stockFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/addFragment"
         android:name="com.example.user.AddFragment"
         android:label="fragment_add"
-        tools:layout="@layout/fragment_add" />
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_diagramFragment"
+            app:destination="@id/diagramFragment" />
+        <action
+            android:id="@+id/action_addFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_addFragment_to_stockFragment"
+            app:destination="@id/stockFragment" />
+    </fragment>
     <fragment
         android:id="@+id/diagramFragment"
         android:name="com.example.user.DiagramFragment"
@@ -34,5 +53,18 @@
         android:id="@+id/settingsFragment"
         android:name="com.example.user.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/oblokoFragment"
+        android:name="com.example.user.OblokoFragment"
+        android:label="fragment_obloko"
+        tools:layout="@layout/fragment_obloko" >
+        <action
+            android:id="@+id/action_oblokoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

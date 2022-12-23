@@ -13,6 +13,8 @@ class DayAdapter (var prodactList: List<Prodact>): RecyclerView.Adapter<DayAdapt
     inner class MyViewHolder(var itemView: View ):RecyclerView.ViewHolder(itemView){
         fun onBind(prodact: Prodact){
             itemView.prodact_name.text = prodact.name
+
+
         }
 
     }
