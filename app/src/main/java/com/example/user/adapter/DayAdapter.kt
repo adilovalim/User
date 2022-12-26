@@ -5,18 +5,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.user.R
-import com.example.user.model.Prodact
+import com.example.user.model.DialogProdact
 import kotlinx.android.synthetic.main.item_prodact.view.*
-import kotlinx.android.synthetic.main.one_day_dialog.view.*
 
-class DayAdapter(var context: android.content.Context, var prodactList: List<Prodact>): RecyclerView.Adapter<DayAdapter.MyViewHolder>(){
+class DayAdapter(var prodactList: List<DialogProdact>, var onMyItemClickListener: OnMyItemClickListener): RecyclerView.Adapter<DayAdapter.MyViewHolder>(){
 
     inner class MyViewHolder(var itemView: View ):RecyclerView.ViewHolder(itemView){
-        fun onBind(prodact: Prodact){
+        fun onBind(prodact: DialogProdact){
             itemView.prodact_name.text = prodact.name
-
+            itemView.setOnClickListener {
+                onMyItemClickListener.onMyItemClick(prodact)
+            }
         }
-
 
     }
 
@@ -27,13 +27,17 @@ class DayAdapter(var context: android.content.Context, var prodactList: List<Pro
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val prodact:Prodact =prodactList[position]
+        val prodact:DialogProdact =prodactList[position]
         holder.onBind(prodact)
     }
 
     override fun getItemCount(): Int {
         return prodactList.size
 
+    }
+
+    interface OnMyItemClickListener{
+        fun onMyItemClick(prodact: DialogProdact)
     }
 
 

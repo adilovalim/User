@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_host"
-    app:startDestination="@id/oblokoFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -13,9 +13,6 @@
         <action
             android:id="@+id/action_homeFragment_to_stockFragment"
             app:destination="@id/stockFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_oblokoFragment"
-            app:destination="@id/oblokoFragment" />
     </fragment>
     <fragment
         android:id="@+id/stockFragment"
@@ -57,14 +54,5 @@
         <action
             android:id="@+id/action_settingsFragment_to_addFragment"
             app:destination="@id/addFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/oblokoFragment"
-        android:name="com.example.user.OblokoFragment"
-        android:label="fragment_obloko"
-        tools:layout="@layout/fragment_obloko" >
-        <action
-            android:id="@+id/action_oblokoFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
