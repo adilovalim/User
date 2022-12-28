@@ -9,38 +9,17 @@
         android:id="@+id/homeFragment"
         android:name="com.example.user.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_stockFragment"
-            app:destination="@id/stockFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/stockFragment"
         android:name="com.example.user.StockFragment"
         android:label="fragment_stock"
-        tools:layout="@layout/fragment_stock" >
-        <action
-            android:id="@+id/action_stockFragment_to_addFragment"
-            app:destination="@id/addFragment" />
-        <action
-            android:id="@+id/action_stockFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_stock" />
     <fragment
         android:id="@+id/addFragment"
         android:name="com.example.user.AddFragment"
         android:label="fragment_add"
-        tools:layout="@layout/fragment_add" >
-        <action
-            android:id="@+id/action_addFragment_to_diagramFragment"
-            app:destination="@id/diagramFragment" />
-        <action
-            android:id="@+id/action_addFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
-        <action
-            android:id="@+id/action_addFragment_to_stockFragment"
-            app:destination="@id/stockFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_add" />
     <fragment
         android:id="@+id/diagramFragment"
         android:name="com.example.user.DiagramFragment"
@@ -52,7 +31,24 @@
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
         <action
-            android:id="@+id/action_settingsFragment_to_addFragment"
-            app:destination="@id/addFragment" />
+            android:id="@+id/action_settingsFragment_to_firebaseFragment"
+            app:destination="@id/firebaseFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_omborFragment"
+            app:destination="@id/omborFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/firebaseFragment"
+        android:name="com.example.user.FirebaseFragment"
+        android:label="fragment_firebase"
+        tools:layout="@layout/fragment_firebase" >
+        <action
+            android:id="@+id/action_firebaseFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/omborFragment"
+        android:name="com.example.user.OmborFragment"
+        android:label="fragment_ombor"
+        tools:layout="@layout/fragment_ombor" />
 </navigation>

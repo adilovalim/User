@@ -6,6 +6,7 @@
     app:cardCornerRadius="25dp"
     android:layout_margin="10dp"
     android:padding="10dp"
+    android:orientation="vertical"
     app:cardBackgroundColor="#5000">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -15,4 +16,11 @@
         android:id="@+id/dialog_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+<!--    <TextView-->
+<!--        -->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_gravity="bottom||end"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="15:32"/>-->
 </androidx.cardview.widget.CardView>

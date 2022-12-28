@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.user.databinding.FragmentSettingsBinding
 import com.example.user.model.User
 import com.google.firebase.auth.FirebaseAuth
@@ -49,7 +50,13 @@ class SettingsFragment : Fragment() {
             }
 
         })
+        binding.firbase.setOnClickListener{
+            findNavController().navigate(R.id.firebaseFragment)
+        }
 
+        binding.ombor.setOnClickListener {
+            findNavController().navigate(R.id.omborFragment)
+        }
         return view
     }
 
