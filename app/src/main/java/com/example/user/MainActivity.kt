@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         windowInsetsController.hide(WindowInsetsCompat.Type.statusBars())
 
 
+
         val navController = Navigation.findNavController(this,R.id.fragmentContainerView)
         setupWithNavController(binding.bottomNaw, navController)
     }
