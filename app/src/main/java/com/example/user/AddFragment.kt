@@ -2,6 +2,7 @@ package com.example.user
 
 import android.Manifest
 import android.app.AlertDialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -22,9 +23,8 @@ import java.io.File
 import java.io.FileOutputStream
 
 class AddFragment : Fragment() {
-
-    lateinit var binding: FragmentAddBinding
     val REQUEST_CODE = 1
+lateinit var binding: FragmentAddBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,23 +33,21 @@ class AddFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_add, container, false)
         var binding = FragmentAddBinding.bind(view)
 
-
-        Dexter.withContext(requireContext())
-            .withPermissions(
-                Manifest.permission.CAMERA,
-                Manifest.permission.READ_EXTERNAL_STORAGE,
-            ).withListener(object : MultiplePermissionsListener {
-                override fun onPermissionsChecked(report: MultiplePermissionsReport) {
-
-                }
-
-                override fun onPermissionRationaleShouldBeShown(
-                    permissions: List<PermissionRequest?>?,
-                    token: PermissionToken?
-                ) { /* ... */
-                }
-            }).check()
-
+//        Dexter.withContext(requireContext())
+//            .withPermissions(
+//                Manifest.permission.CAMERA,
+//                Manifest.permission.READ_EXTERNAL_STORAGE,
+//            ).withListener(object : MultiplePermissionsListener {
+//                override fun onPermissionsChecked(report: MultiplePermissionsReport) {
+//
+//                }
+//
+//                override fun onPermissionRationaleShouldBeShown(
+//                    permissions: List<PermissionRequest?>?,
+//                    token: PermissionToken?
+//                ) { /* ... */
+//                }
+//            }).check()
         binding.foto.setOnClickListener {
             val alert = AlertDialog.Builder(context).create()
 
@@ -59,9 +57,7 @@ class AddFragment : Fragment() {
 
             alert.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-
             val bind = Dialog1Binding.bind(view1)
-
 
             bind.btnSave.setOnClickListener {
 
@@ -69,31 +65,37 @@ class AddFragment : Fragment() {
                 Toast.makeText(context, "SUCCESSFULLY", Toast.LENGTH_SHORT).show()
             }
             bind.immage1.setOnClickListener {
-                pickImageFromNewGallarey()
+//                pickImageFromNewGallarey()
+                clickPeremision()
             }
         }
 
-//
+//        binding.radioBtn.setOnClickListener {
+//            binding.productSoni.visibility = View.INVISIBLE
+//            Toast.makeText(requireContext(), "ERROR", Toast.LENGTH_SHORT).show()
+//        }
         return view
     }
 
-    private fun pickImageFromNewGallarey() {
-        getImageContent.launch("image/*")
+    private fun clickPeremision() {
+        val intent = Intent(requireContext(), PeremissionActivity::class.java)
+        startActivity(intent)
     }
 
-    private val getImageContent =registerForActivityResult(ActivityResultContracts.GetContent()){ uri ->
-        uri?: return@registerForActivityResult
-        binding.gallareyImage.setImageURI(uri)
-        val openInputStream = contentResolver?.openInputStream(uri)
-        val file = File(filesDir, "image.jpg")
-        val fileOutputStream = FileOutputStream(file)
-        openInputStream?.copyTo(fileOutputStream)
-        openInputStream?.close()
-        fileOutputStream.close()
-        val fileAbsolutePath = file.absolutePath
-        Toast.makeText(this, fileAbsolutePath, Toast.LENGTH_SHORT).show()
-    }
-
-
+//    private fun pickImageFromNewGallarey() {
+//        getImageContent.launch("image/*")
+//    }
+//    private val getImageContent =registerForActivityResult(ActivityResultContracts.GetContent()){ uri ->
+//        uri?: return@registerForActivityResult
+//        binding.gallareyImage.setImageURI(uri)
+//        val openInputStream = requireActivity().contentResolver?.openInputStream(uri)
+//        val file = requireActivity().File.(filesDir, "image.jpg")
+//        val fileOutputStream = requireActivity()FileOutputStream(file)
+//        openInputStream?.copyTo(fileOutputStream)
+//        openInputStream?.close()
+//        fileOutputStream.close()
+//        val fileAbsolutePath = file.absolutePath
+//        Toast.makeText(requireContext(), fileAbsolutePath, Toast.LENGTH_SHORT).show()
+//    }
 
 }

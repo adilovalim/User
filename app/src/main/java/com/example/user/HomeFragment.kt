@@ -72,7 +72,7 @@ class HomeFragment : Fragment() {
     private fun addProdact() {
         prodactList = ArrayList()
         for (i in 1..100){
-            prodactList.add(DialogProdact(i,"apple"))
+            prodactList.add(DialogProdact(i,"Falonchiga "))
         }
     }
 

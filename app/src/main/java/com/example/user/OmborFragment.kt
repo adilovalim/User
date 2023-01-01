@@ -31,7 +31,7 @@ lateinit var totalOmborAdapter: RV_TotalOmbor
     private fun loadOmbor() {
         totalOmborList =ArrayList()
         for (i in 1 ..17){
-            totalOmborList.add(TotalOmbor(i,"ADWQDAD"))
+            totalOmborList.add(TotalOmbor(i,"Zaxira"))
         }
     }
 
